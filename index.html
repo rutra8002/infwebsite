@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippets</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add a consistent font family and size */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #fff; /* Add this line to make the text white */
+        }
+
+        /* Use a consistent color scheme */
+        body {
+            background-color: #333;
+        }
+
+        .card-header {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .card {
+            background-color: #444;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Use a grid system for layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        /* Add hover effects */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Change color of code text to white */
+        pre {
+            color: #fff;
+            overflow-y: scroll; /* Add this line to add a vertical scrollbar */
+        }
+    </style>
+</head>
+<body>
+    <!-- Add Bootstrap container for content -->
+    <div class="container">
+        <h1 class="mt-5 mb-3">Python Code Snippets</h1>
+
+        <!-- Bootstrap card for each code snippet -->
+        <div class="card mb-3">
+            <div class="card-header">Check if an Array is a Palindrome EZ</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode')">Copy Code</button>
+                <pre id="isPalindromeCode">
+def is_palindrome_ez(arr):
+    if arr == reverse_array(arr):
+        return True
+    else:
+        return False
+                </pre>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">Reverse an Array EZ</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode')">Copy Code</button>
+                <pre id="reverseArrayCode">
+def reverse_array_ez(arr):
+    return arr[::-1]
+                
+                </pre>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">Check if an Array is a Palindrome</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode2')">Copy Code</button>
+                <pre id="isPalindromeCode2">
+def is_palindrome(arr):
+    for i in range(len(arr)//2):
+        if arr[i] != arr[-i-1]:
+            return False
+    return True
+
+                
+                </pre>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">Reverse an Array</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode2')">Copy Code</button>
+                <pre id="reverseArrayCode2">
+def reverse_array(arr):
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+    return arr
+                
+                </pre>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">Bubble Sort</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('bubbleSortCode')">Copy Code</button>
+                <pre id="bubbleSortCode">
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+                </pre>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">Selection Sort</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('selectionSortCode')">Copy Code</button>
+                <pre id="selectionSortCode">
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+                </pre>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Bootstrap JavaScript and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Add script for copying code to clipboard -->
+    <script>
+        // Function to copy code to clipboard
+        function copyToClipboard(codeId) {
+            // Get the code element
+            const code = document.getElementById(codeId);
+
+            // Create a textarea element to hold the code
+            const textarea = document.createElement('textarea');
+            textarea.value = code.innerText;
+            document.body.appendChild(textarea);
+
+            // Copy the code to the clipboard
+            textarea.select();
+            document.execCommand('copy');
+
+            // Remove the textarea element
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>

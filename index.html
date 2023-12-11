@@ -148,6 +148,36 @@ def selection_sort(arr):
     return arr
                 </pre>
             </div>
+            <div class="card mb-3">
+            <div class="card-header">Selection Sort</div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" onclick="copyToClipboard('inf')">Copy Code</button>
+                <pre id="inf">
+file = open("sequence.txt", "r")
+for line in file:
+    characters = line.strip().split()
+    numbers = [int(character) for character in characters]
+
+    max_length = 0
+    max_rtn = []
+    for first in range(len(numbers)):
+        if smt[first]:
+            length = 1
+            rtn = [numbers[first]]
+            for i in range(first + 1, len(numbers)):
+                if smt[numbers[i]]:
+                    length += 1
+                    rtn.append(numbers[i])
+                    if length > max_length:
+                        max_length = length
+                        max_rtn = rtn
+                else:
+                    break
+    print(max_length)
+    print(max_rtn)
+
+                </pre>
+            </div>
         </div>
 
     </div>

@@ -53,56 +53,56 @@
     </style>
 </head>
 <body>
-    <!-- Add Bootstrap container for content -->
-    <div class="container">
-        <h1 class="mt-5 mb-3">Python Code Snippets</h1>
+<!-- Add Bootstrap container for content -->
+<div class="container">
+    <h1 class="mt-5 mb-3">Python Code Snippets</h1>
 
-        <!-- Bootstrap card for each code snippet -->
-        <div class="card mb-3">
-            <div class="card-header">Check if an Array is a Palindrome EZ</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode')">Copy Code</button>
-                <pre id="isPalindromeCode">
+    <!-- Bootstrap card for each code snippet -->
+    <div class="card mb-3">
+        <div class="card-header">Check if an Array is a Palindrome EZ</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode')">Copy Code</button>
+            <pre id="isPalindromeCode">
 def is_palindrome_ez(arr):
     if arr == reverse_array(arr):
         return True
     else:
         return False
                 </pre>
-            </div>
         </div>
+    </div>
 
-        <div class="card mb-3">
-            <div class="card-header">Reverse an Array EZ</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode')">Copy Code</button>
-                <pre id="reverseArrayCode">
+    <div class="card mb-3">
+        <div class="card-header">Reverse an Array EZ</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode')">Copy Code</button>
+            <pre id="reverseArrayCode">
 def reverse_array_ez(arr):
     return arr[::-1]
-                
+
                 </pre>
-            </div>
         </div>
-        <div class="card mb-3">
-            <div class="card-header">Check if an Array is a Palindrome</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode2')">Copy Code</button>
-                <pre id="isPalindromeCode2">
+    </div>
+    <div class="card mb-3">
+        <div class="card-header">Check if an Array is a Palindrome</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('isPalindromeCode2')">Copy Code</button>
+            <pre id="isPalindromeCode2">
 def is_palindrome(arr):
     for i in range(len(arr)//2):
         if arr[i] != arr[-i-1]:
             return False
     return True
 
-                
+
                 </pre>
-            </div>
         </div>
-        <div class="card mb-3">
-            <div class="card-header">Reverse an Array</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode2')">Copy Code</button>
-                <pre id="reverseArrayCode2">
+    </div>
+    <div class="card mb-3">
+        <div class="card-header">Reverse an Array</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('reverseArrayCode2')">Copy Code</button>
+            <pre id="reverseArrayCode2">
 def reverse_array(arr):
     left = 0
     right = len(arr) - 1
@@ -111,16 +111,16 @@ def reverse_array(arr):
         left += 1
         right -= 1
     return arr
-                
-                </pre>
-            </div>
-        </div>
 
-        <div class="card mb-3">
-            <div class="card-header">Bubble Sort</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('bubbleSortCode')">Copy Code</button>
-                <pre id="bubbleSortCode">
+                </pre>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header">Bubble Sort</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('bubbleSortCode')">Copy Code</button>
+            <pre id="bubbleSortCode">
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -129,14 +129,14 @@ def bubble_sort(arr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
                 </pre>
-            </div>
         </div>
+    </div>
 
-        <div class="card mb-3">
-            <div class="card-header">Selection Sort</div>
-            <div class="card-body">
-                <button class="btn btn-primary mb-3" onclick="copyToClipboard('selectionSortCode')">Copy Code</button>
-                <pre id="selectionSortCode">
+    <div class="card mb-3">
+        <div class="card-header">Selection Sort</div>
+        <div class="card-body">
+            <button class="btn btn-primary mb-3" onclick="copyToClipboard('selectionSortCode')">Copy Code</button>
+            <pre id="selectionSortCode">
 def selection_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -147,8 +147,9 @@ def selection_sort(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
                 </pre>
-            </div>
-            <div class="card mb-3">
+        </div>
+    </div>
+        <div class="card mb-3">
             <div class="card-header">Selection Sort</div>
             <div class="card-body">
                 <button class="btn btn-primary mb-3" onclick="copyToClipboard('inf')">Copy Code</button>
